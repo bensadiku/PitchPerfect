@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-B1-qkN">
+                                <rect key="frame" x="154" y="424" width="106" height="48"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="baq-ZG-I2w"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTr-Ob-xN3">
+                                <rect key="frame" x="154" y="480" width="106.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le2-Xp-ptf">
+                                <rect key="frame" x="154" y="509" width="106" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="goi-bG-pNx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="le2-Xp-ptf" firstAttribute="top" secondItem="GTr-Ob-xN3" secondAttribute="bottom" constant="8" id="5wl-TX-mUI"/>
+                            <constraint firstItem="Jtx-B1-qkN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="byi-0h-WoR"/>
+                            <constraint firstItem="GTr-Ob-xN3" firstAttribute="centerX" secondItem="Jtx-B1-qkN" secondAttribute="centerX" id="f8a-ld-C6E"/>
+                            <constraint firstItem="GTr-Ob-xN3" firstAttribute="leading" secondItem="Jtx-B1-qkN" secondAttribute="trailing" constant="-114" id="hcb-5p-Zh7"/>
+                            <constraint firstItem="Jtx-B1-qkN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qNf-FM-xMx"/>
+                            <constraint firstItem="le2-Xp-ptf" firstAttribute="centerX" secondItem="GTr-Ob-xN3" secondAttribute="centerX" id="qud-yl-P2a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="recordingButton" destination="Jtx-B1-qkN" id="sLN-to-wH3"/>
+                        <outlet property="recordingLabel" destination="GTr-Ob-xN3" id="oft-C9-0pM"/>
+                        <outlet property="stopRecording" destination="le2-Xp-ptf" id="2gU-jM-scw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>
